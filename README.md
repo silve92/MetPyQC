@@ -1,4 +1,4 @@
-# PyQC
+# MetPyQC
 
 Python library for quality control and reconstruction of meteorological data
 
