@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath('../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'PyQC'
+project = 'MetPyQC'
 copyright = '2021, Research Center on Climate and Climate Change (University of Perugia)'
 author = 'Lorenzo Silvestri'
 
