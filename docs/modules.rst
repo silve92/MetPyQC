@@ -1,7 +1,7 @@
-pyqc
-====
+metpyqc
+=======
 
 .. toctree::
    :maxdepth: 4
 
-   pyqc
+   metpyqc

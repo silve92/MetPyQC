@@ -6,7 +6,7 @@
 MetPyQC
 =======
 
-.. image:: _static/logo_pyqc.jpg
+.. image:: _static/logo_pyqc4.jpg
    :width: 300 px
    :align: center
    :alt: PyQC logo

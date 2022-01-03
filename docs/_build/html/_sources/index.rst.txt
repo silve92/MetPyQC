@@ -3,15 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-PyQC
-====
+MetPyQC
+=======
 
-.. image:: _static/logo_pyqc.jpg
+.. image:: _static/logo_pyqc4.jpg
    :width: 300 px
    :align: center
    :alt: PyQC logo
 
-**PyQC** is a Python library for quality control and reconstruction of meteorological data.
+**MetPyQC** is a Python library for quality control and reconstruction of meteorological data.
 Write here general description and usage.
 
 .. note::
