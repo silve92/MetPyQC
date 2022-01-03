@@ -9,7 +9,7 @@ MetPyQC
 .. image:: _static/logo_pyqc4.jpg
    :width: 300 px
    :align: center
-   :alt: PyQC logo
+   :alt: MetPyQC logo
 
 **MetPyQC** is a Python library for quality control and reconstruction of meteorological data.
 Write here general description and usage.
@@ -21,7 +21,7 @@ Write here general description and usage.
    :maxdepth: 3
    :caption: Documentation
 
-   pyqc
+   metpyqc
 
 
 
