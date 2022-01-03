@@ -1,0 +1,803 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>metpyqc package &mdash; MetPyQC 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MetPyQC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">metpyqc package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-metpyqc.calculate">metpyqc.calculate module</a></li>
+<li><a class="reference internal" href="#module-metpyqc.internal">metpyqc.internal module</a></li>
+<li><a class="reference internal" href="#module-metpyqc.range">metpyqc.range module</a></li>
+<li><a class="reference internal" href="#module-metpyqc.reconstruct">metpyqc.reconstruct module</a></li>
+<li><a class="reference internal" href="#module-metpyqc.spatial">metpyqc.spatial module</a></li>
+<li><a class="reference internal" href="#module-metpyqc.temporal">metpyqc.temporal module</a></li>
+<li><a class="reference internal" href="#module-metpyqc">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MetPyQC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>metpyqc package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/metpyqc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="metpyqc-package">
+<h1>metpyqc package<a class="headerlink" href="#metpyqc-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-metpyqc.calculate">
+<span id="metpyqc-calculate-module"></span><h2>metpyqc.calculate module<a class="headerlink" href="#module-metpyqc.calculate" title="Permalink to this headline">¶</a></h2>
+<p>Useful routines for quality control tests</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.calculate.dewpoint">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.calculate.</span></span><span class="sig-name descname"><span class="pre">dewpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temperature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_humidity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.calculate.dewpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate dewpoint temperature from temperature and relative humidity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>temperature</strong> (<em>pd.DataFrame</em>) – Temperature in degree Celsius</p></li>
+<li><p><strong>relative_humidity</strong> (<em>pd.DataFrame</em>) – Relative humidity in percentage</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dew</strong> – Dewpoint temperature in degree Celsius</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<div class="admonition-notes admonition">
+<p class="admonition-title">Notes</p>
+<p>The formula used to calculate dewpoint temperature is obtained by
+inverting the Bolton’s formula <a class="reference internal" href="#emanuel1994" id="id1"><span>[Emanuel1994]</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[T_{d} \simeq \frac{243.5}{(\frac{17.67}{ln (e/6.112)}) -1}.\]</div>
+<p>where <span class="math notranslate nohighlight">\(e = RH e^{*}\)</span>, with e being the actual vapor pressure, RH the relative humidity
+and <span class="math notranslate nohighlight">\(e^{*}\)</span> the saturation vapor pressure as obtained from the <a class="reference internal" href="#bolton1980" id="id2"><span>[Bolton1980]</span></a> formula:</p>
+<div class="math notranslate nohighlight">
+\[e^{x} = 6.112 exp (\frac{17.67 T}{T +243.5})\]</div>
+</div>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="emanuel1994"><span class="brackets"><a class="fn-backref" href="#id1">Emanuel1994</a></span></dt>
+<dd><p>Emanuel, Kerry A. Atmospheric convection. Oxford University Press on Demand, 1994.</p>
+</dd>
+<dt class="label" id="bolton1980"><span class="brackets"><a class="fn-backref" href="#id2">Bolton1980</a></span></dt>
+<dd><p>Bolton, David. The computation of equivalent potential temperature.Monthly weather review, 1980, 108.7: 1046-1053.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.calculate.find_neighbors">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.calculate.</span></span><span class="sig-name descname"><span class="pre">find_neighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.calculate.find_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find neighbors point inside a search radius</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>N</em><em>,</em><em>2</em><em>)</em>) – (lat,lon) of surrounding points in decimal degrees. Shape (N,2)</p></li>
+<li><p><strong>xi</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>1</em><em>,</em><em>2</em><em>)</em>) – (lat,lon) of center of ball in decimal degrees. Shape (1,2)</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Search radius in decimal degrees</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>indices</strong> – Indices of neighbors points inside the search radius</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like,</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-metpyqc.internal">
+<span id="metpyqc-internal-module"></span><h2>metpyqc.internal module<a class="headerlink" href="#module-metpyqc.internal" title="Permalink to this headline">¶</a></h2>
+<p>Internal Consistency Tests</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.internal.dewpoint_test">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.internal.</span></span><span class="sig-name descname"><span class="pre">dewpoint_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.internal.dewpoint_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if derived dewpoint temperature is smaller or equal than temperature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>temp</strong> (<em>pd.DataFrame</em>) – Temperature dataframe to be tested (time, stations_temp) in degree Celsius</p></li>
+<li><p><strong>rh</strong> (<em>pd.DataFrame</em>) – Relative humidity dataframe to be tested (time, stations_rh) in percentage</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul>
+<li><p><strong>flag_temp</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which temperature value fail the test.</p></li>
+<li><p><strong>flag_rh</strong> (<em>pd.DataFrame</em>) –</p>
+<dl class="simple">
+<dt>Dataframe with flags identifying values which relative humidity</dt><dd><p>value fail the test.</p>
+</dd>
+</dl>
+</li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals from prescribed limits:
+positive values indicates wrong values (use for temperature dataframe).</p></li>
+<li><p><strong>temp_dew</strong> (<em>pd.DataFrame</em>) – Dew-point temperature in degree Celsius</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This test is applied only to stations measuring both temperature and
+relative humidity.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.internal.heated_raingauge">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.internal.</span></span><span class="sig-name descname"><span class="pre">heated_raingauge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind_heater</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.internal.heated_raingauge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check when precipitation occurs with freezing temperatures (below 0 degree Celsius).
+Flag values when the raingauge is not heated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prec</strong> (<em>pd.DataFrame</em>) – Precipitation dataframe to be tested (time, stations_prec) in mm</p></li>
+<li><p><strong>temp</strong> (<em>pd.DataFrame</em>) – Temperature dataframe to be tested (time, stations_temp) in degree Celsius.</p></li>
+<li><p><strong>ind_heater</strong> (<em>list</em>) – List of indexes indicating which raingauge is heated.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flag</strong> – Dataframe with flags identifying precipitation values which fail the test.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This test is applied only to stations measuring both precipitation and
+temperature.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.internal.humidity_prec">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.internal.</span></span><span class="sig-name descname"><span class="pre">humidity_prec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.internal.humidity_prec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check when relative humidity is below a certain value (rh_min), while precipitation
+is occurring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rh</strong> (<em>pd.DataFrame</em>) – Relative humidity dataframe to be tested (time, stations_rh) in percentage</p></li>
+<li><p><strong>prec</strong> (<em>pd.DataFrame</em>) – Precipitation dataframe to be tested (time, stations_prec) in mm</p></li>
+<li><p><strong>rh_min</strong> (<em>float</em>) – Minimum acceptable value of relative humidity during a precipitation event.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flag</strong> – Dataframe with flags identifying relative humidity values which fail the test.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This test is applied only to stations measuring both precipitation and
+relative humidity.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.internal.leafwet_humidity">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.internal.</span></span><span class="sig-name descname"><span class="pre">leafwet_humidity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rh_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.internal.leafwet_humidity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check when relative humidity is below a certain value (rh_min), while leaf wetness
+duration is bigger than 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lw</strong> (<em>pd.DataFrame</em>) – Leaf wetness duration dataframe to be tested (time, stations_lw) in min</p></li>
+<li><p><strong>rh</strong> (<em>pd.DataFrame</em>) – Relative humidity dataframe to be tested (time, stations_rh) in percentage</p></li>
+<li><p><strong>rh_min</strong> (<em>float</em>) – Minimum acceptable value of relative humidity for observing leaf wetness duration.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flag</strong> – Dataframe with flags identifying leaf wetness values which fail the test.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This test is applied only to stations measuring both leaf wetness and
+relative humidity.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.internal.maxmin">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.internal.</span></span><span class="sig-name descname"><span class="pre">maxmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.internal.maxmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if averaged observed values lies between their maximum and minimum
+corresponding observations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframes to be tested (time, stations):
+average, maximum and minimum values respectively</p></li>
+<li><p><strong>x_max</strong> (<em>pd.DataFrame</em>) – Dataframes to be tested (time, stations):
+average, maximum and minimum values respectively</p></li>
+<li><p><strong>x_min</strong> (<em>pd.DataFrame</em>) – Dataframes to be tested (time, stations):
+average, maximum and minimum values respectively</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals from prescribed limits:
+positive values indicates wrong values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.internal.snow_grass">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.internal.</span></span><span class="sig-name descname"><span class="pre">snow_grass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">snd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snd_toll</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_grass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_grass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.internal.snow_grass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check when snow depth exceed tolerance values during grass growth period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>snd</strong> (<em>pd.DataFrame</em>) – Snow depth dataframe to be tested (time, stations) in cm</p></li>
+<li><p><strong>snd_toll</strong> (<em>float</em>) – Snow depth instrumental tolerance in cm</p></li>
+<li><p><strong>start_grass</strong> (<em>int</em>) – Month number identifying the starting period of grass growth.</p></li>
+<li><p><strong>end_grass</strong> (<em>int</em>) – Month number identifying the ending period of grass growth.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flag</strong> – Dataframe with flags identifying precipitation values which fail the test.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.internal.wspeed_wdir">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.internal.</span></span><span class="sig-name descname"><span class="pre">wspeed_wdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ws</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.internal.wspeed_wdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if wind speed and direction are consistent: if wind speed is null,
+then also wind direction should be null and viceversa. Residuals cannot be evaluated
+from this logical condition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ws</strong> (<em>pd.DataFrame</em>) – Wind speed dataframe to be tested (time, stations) in m/s</p></li>
+<li><p><strong>wd</strong> (<em>pd.DataFrame</em>) – Wind direction dataframe to be tested (time, stations) in degree north.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flag</strong> – Dataframe with flags identifying values which fail the test.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-metpyqc.range">
+<span id="metpyqc-range-module"></span><h2>metpyqc.range module<a class="headerlink" href="#module-metpyqc.range" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.range.range_all">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.range.</span></span><span class="sig-name descname"><span class="pre">range_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.range.range_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if observed values are outside the instrumental limits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframe to be tested (time, stations)</p></li>
+<li><p><strong>min_val</strong> (<em>float</em>) – lower limit of instrumental range.</p></li>
+<li><p><strong>max_val</strong> (<em>float</em>) – upper limit of instrumental range.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals from prescribed limits:
+positive values indicates wrong values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.range.range_seas">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.range.</span></span><span class="sig-name descname"><span class="pre">range_seas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.range.range_seas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if observed values are outside the seasonal climatological limits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframe to be tested (time, stations)</p></li>
+<li><p><strong>min_vals</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>4</em><em>,</em><em>)</em>) – Array of lower limits for each season in this order: DJF (December, January, February),
+MAM (March, April, May), JJA (June, July, August), SON (September, October, November).</p></li>
+<li><p><strong>max_vals</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>4</em><em>,</em><em>)</em>) – Array of upper limits for each season in this order: DJF (December, January, February),
+MAM (March, April, May), JJA (June, July, August), SON (September, October, November).</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals from prescribed limits:
+positive values indicates wrong values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-metpyqc.reconstruct">
+<span id="metpyqc-reconstruct-module"></span><h2>metpyqc.reconstruct module<a class="headerlink" href="#module-metpyqc.reconstruct" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-metpyqc.spatial">
+<span id="metpyqc-spatial-module"></span><h2>metpyqc.spatial module<a class="headerlink" href="#module-metpyqc.spatial" title="Permalink to this headline">¶</a></h2>
+<p>Spatial Consistency Tests</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.spatial.hubbard_consistency">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.spatial.</span></span><span class="sig-name descname"><span class="pre">hubbard_consistency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_neigh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missing_perc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.spatial.hubbard_consistency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hubbard spatial weighted regression analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>n</em><em>,</em><em>)</em>) – Array of latitudes in decimal degrees</p></li>
+<li><p><strong>lon</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>n</em><em>,</em><em>)</em>) – Array of longitudes in decimal degrees</p></li>
+<li><p><strong>x</strong> (<em>pd.DataFrame</em><em>, </em><em>shape</em><em>(</em><em>t</em><em>,</em><em>n</em><em>)</em>) – Pandas dataframe of observations, where t is time and n is the number of stations</p></li>
+<li><p><strong>start_test</strong> (<em>string</em>) – Datetime string indicating when to start testing</p></li>
+<li><p><strong>end_test</strong> (<em>string</em>) – Datetime string indicating when to end testing</p></li>
+<li><p><strong>n_max</strong> (<em>int</em>) – Maximum number of best fit stations to use for the estimate</p></li>
+<li><p><strong>t_max</strong> (<em>int</em>) – Number of time steps to be considered in the regression analysis (even number)</p></li>
+<li><p><strong>search_radius</strong> (<em>float</em>) – Radius for Hubbard analysis in decimal degrees</p></li>
+<li><p><strong>min_neigh</strong> (<em>int</em>) – Minimum number of neighbors to find the estimate</p></li>
+<li><p><strong>missing_perc</strong> (<em>int</em>) – Maximum percentage of missing data to perform regression</p></li>
+<li><p><strong>f</strong> (<em>int</em>) – Factor multiplying standard deviation for calculating the acceptable range for
+valid observations.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – Integer representing flag values to be associated to
+erroneous values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>df_x_est</strong> (<em>pd.DataFrame, shape(t,n)</em>) – Estimated observations,
+filled with np.nan values where estimate is not possible</p></li>
+<li><p><strong>df_std_est</strong> (<em>pd.DataFrame, shape(t,n)</em>) – Standard deviation from the estimated observations,
+filled with np.nan values where estimate is not possible</p></li>
+<li><p><strong>flag</strong> (<em>pd.DataFrame, shape(t,n)</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame, shape(t,n)</em>) – Dataframe with quantitative residuals from prescribed limits:
+positive values indicates wrong values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<div class="admonition-notes admonition">
+<p class="admonition-title">Notes</p>
+<p>The spatial weighted regression test is based on the algorithm proposed by <a class="reference internal" href="#hubbard2005" id="id3"><span>[Hubbard2005]</span></a>.
+Firstly for each reference station <span class="math notranslate nohighlight">\((0)\)</span> the neighbour stations <span class="math notranslate nohighlight">\((n)\)</span> inside a certain
+<cite>search_radius</cite> are founded. This search radius should be set close to the average spacing
+of the observations and large enough to have at least one neighbour for each station.</p>
+<p>Once the neighbours have been established, if the number of missing values in each series
+is lower than missing_perc and n <span class="math notranslate nohighlight">\(\ge\)</span> <cite>n_max</cite> , a linear regression  is computed
+between their values <span class="math notranslate nohighlight">\(x(t,n)\)</span> over all the selected time steps <cite>t_max</cite> and
+the reference station values <span class="math notranslate nohighlight">\(x(t,0)\)</span>, in order to find a first estimate
+<span class="math notranslate nohighlight">\(x^*_n(0)\)</span> of <span class="math notranslate nohighlight">\(x(0)\)</span> that should be consistent with <span class="math notranslate nohighlight">\(x(n)\)</span> at each time step.</p>
+<p>Then the root mean square error between the reference values <span class="math notranslate nohighlight">\(x(0)\)</span> and
+the estimated values <span class="math notranslate nohighlight">\(x^*_n(0)\)</span> from the regression line with the neighbor station <span class="math notranslate nohighlight">\(n\)</span>
+(correspondent to the sample standard deviation of the residuals <span class="math notranslate nohighlight">\(\sigma^*_n\)</span> )
+is evaluated in order to find a measure of the stations correlation:</p>
+<div class="math notranslate nohighlight">
+\[\sigma^*_n(0)=\sqrt{\frac{1}{t_{max}}\sum_{t=1}^{t_{max}}
+\big[\underbrace{x(t,0)-x^*_n(t,0)}_{\text{Residuals}}\big]^2}\]</div>
+<p>This error characterizing each neighbour station is used as weight in the final estimate
+of the reference value <span class="math notranslate nohighlight">\(x^*(t,0)\)</span> and reference standard deviation <span class="math notranslate nohighlight">\(\sigma^*(0)\)</span>
+from the surrounding stations at each instant t:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^*(t,0)=\frac{\sum_{n=1}^{n_{max}} (x^*_n)^2/(\sigma^*_n)^2}{\sum_{n=1}^{n_{max}} 1/\sigma_n^2} \\
+\sigma^{*2}(0)= \frac{n_{max}}{\sum_{n=1}^{n_{max}} 1/(\sigma^*_n)^2}\end{split}\]</div>
+<p>Finally at each time step a tolerance interval is established by considering
+a constant factor <cite>f</cite> and the spatial consistency is verified by ensuring that:</p>
+<div class="math notranslate nohighlight">
+\[x^*(t,0)-f\sigma^*(0) &lt; x(t,0) &lt; x^*(t,0)+f\sigma^*(0)\]</div>
+<p>This procedure is repeated for each station and each time step. The final estimates
+<span class="math notranslate nohighlight">\(x^*(t,n)\)</span> and reference standard deviation <span class="math notranslate nohighlight">\(\sigma^*(n)\)</span> are given as results on the
+output dataframes <cite>df_x_est</cite> and <cite>df_std_est</cite>, respectively.</p>
+</div>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="hubbard2005"><span class="brackets"><a class="fn-backref" href="#id3">Hubbard2005</a></span></dt>
+<dd><p>Hubbard, K. G., et al. “Performance of quality assurance procedures for an applied climate information system. “Journal of Atmospheric and Oceanic Technology 22.1 (2005): 105-112.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-metpyqc.temporal">
+<span id="metpyqc-temporal-module"></span><h2>metpyqc.temporal module<a class="headerlink" href="#module-metpyqc.temporal" title="Permalink to this headline">¶</a></h2>
+<p>Temporal consistency tests</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.temporal.isolated">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.temporal.</span></span><span class="sig-name descname"><span class="pre">isolated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.temporal.isolated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if an observation of rainfall (or other discrete variables) is isolated with
+respect to the adjacent measures (in time).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframe to be tested (time, stations)</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Number of previous and following time steps to be considered in the test.
+The value must be bigger than 1.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to suspect values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals representing
+the difference between the selected observation and the
+sum of the adjacent ones. As this value increases, the selected observation
+is more isolated with respect to neighbors.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function must be used with dataframes with homogeneous temporal resolution
+on the temporal index. Missing dates have to be filled with np.nan values.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.temporal.persistence_noc">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.temporal.</span></span><span class="sig-name descname"><span class="pre">persistence_noc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.temporal.persistence_noc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not Observed Change (NOC) Persistence test to check minimum variability
+of a certain variable with respect to the previous n time steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframe to be tested (time, stations)</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Number of previous time steps to be considered in the test.
+The value must be bigger than 1.</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to suspect values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals representing
+the maximum absolute difference between the selected observation and the
+preceding ones. As this value tends to zero, the selected observation
+indicates temporal persistence.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function must be used with dataframes with homogeneous temporal resolution
+on the temporal index. Missing dates have to be filled with np.nan values.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.temporal.persistence_var">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.temporal.</span></span><span class="sig-name descname"><span class="pre">persistence_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_val_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.temporal.persistence_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum Variability Persistence test to check minimum allowed variability
+of a certain variable with respect to a certain time window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframe to be tested (time, stations)</p></li>
+<li><p><strong>window</strong> (<em>int</em>) – Number of hours over which evaluate temporal variability</p></li>
+<li><p><strong>perc_min</strong> (<em>int</em>) – Minimum percentage of valid observations (not missing)
+in order to calculate temporal variability</p></li>
+<li><p><strong>method</strong> (<em>{'STD'</em><em>, </em><em>'MAX_MIN'</em><em>, </em><em>'IQR'}</em>) – Method for calculating the temporal variability within the desired
+time window: standard deviation (STD), difference between absolute maximum
+and minimum values (MAX_MIN), interquartile range (IQR).</p></li>
+<li><p><strong>var_val_min</strong> (<em>float</em>) – Minimum allowed variability for the selected variable within the
+defined time window</p></li>
+<li><p><strong>flag_val</strong> (<em>int</em>) – integer representing flag values to be associated to suspect values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals representing
+the difference between the actual variability and the minimum allowed
+variability. Positive values indicates suspect observations.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the selected method is neither ‘STD’, ‘MAX_MIN’ nor ‘IQR’.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.temporal.step_all">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.temporal.</span></span><span class="sig-name descname"><span class="pre">step_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_val_susp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_val_wrong</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val_susp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val_wrong</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.temporal.step_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the difference between consecutive observations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframe to be tested (time, stations)</p></li>
+<li><p><strong>step_val_susp</strong> (<em>float</em>) – step limit for suspect values.</p></li>
+<li><p><strong>step_val_wrong</strong> (<em>float</em>) – step limit for wrong values.</p></li>
+<li><p><strong>flag_val_susp</strong> (<em>int</em>) – integer representing flag values to be associated to
+suspect values.</p></li>
+<li><p><strong>flag_val_wrong</strong> (<em>int</em>) – integer representing flag values to be associated to
+wrong values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals from prescribed limits:
+positive values indicates suspect or wrong values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function must be used with dataframes with homogeneous temporal resolution
+on the temporal index. Missing dates have to be filled with np.nan values.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="metpyqc.temporal.step_seas">
+<span class="sig-prename descclassname"><span class="pre">metpyqc.temporal.</span></span><span class="sig-name descname"><span class="pre">step_seas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_vals_susp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_vals_wrong</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val_susp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_val_wrong</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metpyqc.temporal.step_seas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the difference between consecutive observations by considering different
+limits for each season.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – Dataframe to be tested (time, stations)</p></li>
+<li><p><strong>step_vals_susp</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>4</em><em>,</em><em>)</em>) – Array of step limits for suspect values for each season in this order:
+DJF (December, January, February),MAM (March, April, May),
+JJA (June, July, August), SON (September, October, November).</p></li>
+<li><p><strong>step_vals_wrong</strong> (<em>array_like</em><em>, </em><em>shape</em><em>(</em><em>4</em><em>,</em><em>)</em>) – Array of step limits for wrong values for each season in this order:
+DJF (December, January, February),MAM (March, April, May),
+JJA (June, July, August), SON (September, October, November).</p></li>
+<li><p><strong>flag_val_susp</strong> (<em>int</em>) – integer representing flag values to be associated to
+suspect values.</p></li>
+<li><p><strong>flag_val_wrong</strong> (<em>int</em>) – integer representing flag values to be associated to
+wrong values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>flag</strong> (<em>pd.DataFrame</em>) – Dataframe with flags identifying values which fail the test.</p></li>
+<li><p><strong>res</strong> (<em>pd.DataFrame</em>) – Dataframe with quantitative residuals from prescribed limits:
+positive values indicates suspect or wrong values.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function must be used with dataframes with homogeneous temporal resolution
+on the temporal index. Missing dates have to be filled with np.nan values.</p>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-metpyqc">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-metpyqc" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Research Center on Climate and Climate Change (University of Perugia).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
