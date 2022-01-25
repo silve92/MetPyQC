@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-setup.py
-metpyqc/metpyqc.egg-info/PKG-INFO
-metpyqc/metpyqc.egg-info/SOURCES.txt
-metpyqc/metpyqc.egg-info/dependency_links.txt
-metpyqc/metpyqc.egg-info/requires.txt
-metpyqc/metpyqc.egg-info/top_level.txt
