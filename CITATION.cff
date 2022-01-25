@@ -6,7 +6,7 @@ authors:
   orcid: "https://orcid.org/0000-0002-9379-756X"
 title: "MetPyQC: a python library for quality control and reconstruction of meteorological data"
 version: 0.0.1
-doi: to be assigned
+doi: "https://zenodo.org/badge/latestdoi/442791183"
 date-released: 2022-01-25
 url: "https://github.com/silve92/MetPyQC"
 preferred-citation:
