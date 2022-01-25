@@ -1,4 +1,5 @@
 # MetPyQC
+[![DOI](https://zenodo.org/badge/442791183.svg)](https://zenodo.org/badge/latestdoi/442791183)
 
 Python library for quality control and reconstruction of meteorological data
 
