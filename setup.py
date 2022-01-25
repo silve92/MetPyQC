@@ -5,8 +5,8 @@ with open('README.md', 'r') as fh:
 
 # This call to setup() does all the work
 setuptools.setup(
-    name="metpyqc",
-    version="0.0.3",
+    name="MetPyQC",
+    version="0.0.1",
 
     description="Quality control and reconstruction of meteorological data",
     long_description=long_description,

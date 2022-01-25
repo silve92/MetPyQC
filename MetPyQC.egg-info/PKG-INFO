@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: MetPyQC
+Version: 0.0.1
+Summary: Quality control and reconstruction of meteorological data
+Home-page: https://github.com/silve92/MetPyQC
+Author: Lorenzo Silvestri
+Author-email: lorenzo.silvestri.eng@gmail.com
+License: MIT license
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MetPyQC
+
+Python library for quality control and reconstruction of meteorological data
+
+![Alt text](./docs/_static/logo_pyqc4.jpg)
+
+For detailed documentation visit: 
+
+Project under development
+
+
