@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Silvestri"
+  given-names: "Lorenzo"
+  orcid: "https://orcid.org/0000-0002-9379-756X"
+title: "MetPyQC: a python library for quality control and reconstruction of meteorological data"
+version: 0.0.1
+doi: to be assigned
+date-released: 2022-01-25
+url: "https://github.com/silve92/MetPyQC"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Cerlini Bongioannini"
+    given-names: "Paolina"
+    orcid: "https://orcid.org/0000-0001-7766-089X"
+  - family-names: "Silvestri"
+    given-names: "Lorenzo"
+    orcid: "https://orcid.org/0000-0002-9379-756X"
+  - family-names: "Saraceni"
+    given-names: "Miriam"
+    orcid: "https://orcid.org/0000-0002-8306-7280"
+  doi: "https://doi.org/10.1002/met.1913"
+  journal: "Meteorological Applications" 
+  number: 3
+  pages: e1913
+  title: "Quality control and gap-filling methods applied to hourly temperature observations over central Italy"
+  volume: 27
+  year: 2020
