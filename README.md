@@ -1,5 +1,9 @@
 # MetPyQC
 [![DOI](https://zenodo.org/badge/442791183.svg)](https://zenodo.org/badge/latestdoi/442791183)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPi version](https://badgen.net/pypi/v/metpyqc/)](https://pypi.python.org/pypi/MetPyQC/)
+[![Documentation Status](https://readthedocs.org/projects/metpyqc/badge/?version=latest)](https://metpyqc.readthedocs.io/en/latest/?badge=latest)
+
 
 Python library for quality control and reconstruction of meteorological data
 
