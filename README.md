@@ -2,7 +2,9 @@
 
 Python library for quality control and reconstruction of meteorological data
 
-![MetPyQC](docs/_static/logo_pyqc4.jpg)
+<img src="docs/_static/logo_pyqc4.jpg" alt="drawing" width="400"/>
+
+[//]:![MetPyQC](docs/_static/logo_pyqc4.jpg)
 
 MetPyQC is currently under development and the current version is only preliminary. 
 
